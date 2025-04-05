@@ -1,0 +1,27 @@
+# Node modules
+node_modules/
+
+# Build output
+build/
+
+# Log files
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE files and settings
+.vscode/
+.idea/
+*.swp
+
+# Environment variable files
+.env
+
+# npm package lock file (optional)
+package-lock.json
+
+# Docker-related files (if not needed in the image)
+Dockerfile
+.dockerignore

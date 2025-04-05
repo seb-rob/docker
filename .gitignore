@@ -1,0 +1,37 @@
+# Ignore Docker-related files
+.docker/
+docker-compose.override.yml
+
+# Ignore container-related files
+*.log
+
+# Ignore the build folder for dockerized apps
+/build/
+target/
+
+# Ignore local environment files
+.env
+.env.local
+
+# Ignore files created by editors/IDEs
+.vscode/
+.idea/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore virtual environment (Python-specific)
+venv/
+env/
+*.venv
+
+# Ignore the Docker image cache (if any)
+**/.docker/
+
+# Ignore any Docker specific .tar or .gz files (for image exporting)
+*.tar
+*.gz
+
+# Ignore log files
+*.log

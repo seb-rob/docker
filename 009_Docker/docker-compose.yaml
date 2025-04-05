@@ -1,0 +1,48 @@
+
+# THIS SHOWS HOW TO USE DOCKER-COMPOSE
+
+
+version: '3.8'
+
+services:
+  python-app:
+    build: .
+    container_name: python-app
+    networks:
+      - my-net
+    volumes:
+      - ./app:/app  # Bind mount the local ./app directory to the /app directory in the container
+      - python-app-data:/app/data  # Use a named volume for persistent app data (optional)
+    ports:
+      - "5000:5000"  # Port binding, exposing port 5000 for the Python app
+    depends_on:
+      - mysql-container  # Ensure mysql-container is up before python-app starts
+    environment:
+      - MYSQL_HOST=mysql-container
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_DB=userinfo
+
+  mysql-container:
+    image: mysql:latest
+    container_name: mysql-container
+    networks:
+      - my-net
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: userinfo
+    volumes:
+      - mysql-data:/var/lib/mysql  # Volume for persistent MySQL data
+    ports:
+      - "3306:3306"  # Port binding, exposing MySQL's default port 3306
+
+networks:
+  my-net:
+    driver: bridge  # Custom network to allow containers to communicate
+
+volumes:
+  mysql-data:
+    driver: local  # Volume for MySQL data persistence
+  python-app-data:
+    driver: local  # Optional: Named volume for app-specific data
+

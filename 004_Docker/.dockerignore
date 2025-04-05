@@ -1,0 +1,27 @@
+# Ignore node_modules because it will be rebuilt inside the container
+node_modules
+
+# Ignore log files
+*.log
+
+# Ignore Dockerfile and other Docker-related files
+Dockerfile
+.dockerignore
+
+# Ignore the .git directory
+.git
+
+# Ignore the build output (if applicable)
+dist
+build
+
+# Ignore any temporary files or IDE settings (e.g., VS Code)
+.vscode
+.idea
+*.swp
+
+# Ignore package-lock.json to avoid potential conflicts (you might want to keep this)
+package-lock.json
+
+# Ignore any environment variable files if you don't want them in the Docker image
+.env

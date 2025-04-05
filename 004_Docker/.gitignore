@@ -1,0 +1,33 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore environment variable files (if applicable)
+.env
+
+# Ignore the package-lock.json (optional, you can decide to keep it)
+package-lock.json
+
+# Ignore any temporary files or IDE settings (e.g., VS Code)
+.vscode/
+.idea/
+
+# Ignore build or dist directories if you are building files
+dist/
+build/
+
+# Ignore npm-debug logs
+npm-debug.log*
+
+# Ignore operating system files
+.DS_Store
+Thumbs.db
+
+# Ignore test coverage reports (if any)
+coverage/
+
+# Ignore any other unnecessary files
+*.swp
+*.bak

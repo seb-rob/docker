@@ -1,0 +1,14 @@
+# Ignore IDE/editor files
+.vscode/
+.idea/
+
+# Ignore Docker-related files
+Dockerfile
+Dockerfile.*
+
+# Ignore logs
+*.log
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db

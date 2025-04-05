@@ -1,0 +1,47 @@
+# Ignore virtual environment folder
+venv/
+env/
+*.venv
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore log files
+*.log
+
+# Ignore environment files (e.g., .env) if present
+.env
+
+# Ignore IDE-specific files and settings (e.g., VS Code, PyCharm)
+.vscode/
+.idea/
+
+# Ignore the Dockerfile itself (if not needed in the image)
+Dockerfile
+.dockerignore
+
+# Ignore the Python package manager lock files (optional)
+Pipfile.lock
+
+# Ignore operating system-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore temporary files created by editors (e.g., vim, emacs)
+*.swp
+*.bak
+*.tmp
+
+# Ignore coverage reports
+coverage/
+
+# Ignore tests and test-related files (if not needed in the Docker image)
+tests/
+test/
+*.test.py
+
+# Ignore the README file (if it's not needed in the image)
+README.md
+
