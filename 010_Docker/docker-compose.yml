@@ -1,0 +1,25 @@
+services:
+  frontend:
+    container_name: frontend_container
+    build: ./frontend
+    networks:
+      - my-net
+    ports:
+      - 80:80
+  
+  mysql:
+    container_name: mysql_container
+    image: mysql
+    networks:
+      - my-net
+    volumes:
+      - my-vol:/var/lib/mysql
+    ports:
+      - 3307:3306         # as I have 3306 port occupied by localhost mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=userdatabase
+networks:
+  my-net: {}
+volumes:
+  my-vol: {}
